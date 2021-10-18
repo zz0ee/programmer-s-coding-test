@@ -1,0 +1,14 @@
+
+
+def solution(n):
+    num_1 = 0
+    d = []
+    for i in range(1,13):
+        num_1 = n % i
+        if num_1 == 1:
+            d.append(i)
+
+    answer = min(d)
+    return answer
+
+
