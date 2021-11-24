@@ -1,0 +1,23 @@
+def func(n):
+    ans = []
+    i = 1
+    while i <= n:
+        if n%i == 0:
+            ans.append(i)
+        i += 1
+    return len(ans)
+            
+            
+
+
+def solution(left, right):
+    sum = 0
+    for i in range(left,right+1):
+        if func(i) % 2 == 0:
+            sum += i
+        else:
+            sum -= i
+    return sum            
+            
+    
+    
