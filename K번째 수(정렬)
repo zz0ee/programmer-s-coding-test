@@ -1,0 +1,11 @@
+def solution(array, commands):
+    d = []
+    for j in commands:
+        ans = []
+        ans = array[j[0] - 1:j[1]]
+        ans.sort()
+        d.append(ans[j[2] - 1])
+    return d
+
+
+
