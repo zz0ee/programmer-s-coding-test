@@ -1,0 +1,27 @@
+from itertools import combinations
+
+
+def func(n):
+    i = 1
+    d1 = []
+    while i <= n:
+        if n % i == 0:
+            d1.append(i)
+        i += 1
+    return len(d1)
+
+
+def solution(nums):
+    d = []
+    count = 0
+    result = list(combinations(nums, 3))
+    for i in result:
+        d.append(sum(i))
+    for j in d:
+        if func(j) == 2:
+            count += 1
+
+    return count
+
+
+
