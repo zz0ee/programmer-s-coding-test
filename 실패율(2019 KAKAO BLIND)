@@ -1,0 +1,18 @@
+def solution(n, stages):
+    d = dict()
+    for i in range(1, n + 1):
+        ans = stages
+        num_3 = len(ans)
+        if ans.count(i) == 0:
+            d[i] = 0
+        elif ans.count(i) >= 1:
+            d[i] = ans.count(i) / len(ans)
+            k = ans.count(i)
+            for j in range(k):
+                ans.remove(i)
+    result = d
+    result = sorted(result.items(), key=lambda x: -x[1])
+    d3 = []
+    for h in result:
+        d3.append(h[0])
+    return d3
