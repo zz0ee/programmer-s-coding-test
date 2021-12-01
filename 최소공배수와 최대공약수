@@ -1,0 +1,16 @@
+def GCD(a, b):
+    if b != 0:
+        return GCD(b, a % b)
+    else:
+        return a
+
+
+
+def solution(n, m):
+    d = []
+    num_1 = GCD(n,m)
+    num_2 = num_1*(n//num_1)*(m//num_1)
+    d.append(num_1)
+    d.append(num_2)
+    return d
+    
