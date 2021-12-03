@@ -1,12 +1,18 @@
 def solution(s):
-    ans = list(str(s))
-    if 'o' in ans:
-        num_1 = ans.index('o')
-        del ans[num_1:num_1 + 3]
-        
+    d = {'one': '1', 'two': '2', 'three': '3', 'four': '4', 'five': '5', 'six': '6', 'seven': '7', 'eight': '8',
+         'nine': '9'}
+    ans = []
+    result = []
+    for ch in s:
+        ans.append(ch)
+        num_1 = "".join(ans)
+        if num_1 in d.keys():
+            result.append(d[num_1])
+            ans = []
+        elif ch in d.values():
+            result.append(ch)
+            ans = []
+    num_2 = "".join(result)
+    return num_2
 
 
-    return ans
-
-
-print(solution('one345two'))
