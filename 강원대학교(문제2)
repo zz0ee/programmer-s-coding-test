@@ -1,0 +1,24 @@
+def func(n):
+    ans = []
+    while n != 1:
+        if n % 2 == 0:
+            ans.append(n)
+            n = n // 2
+        else:
+            ans.append(n)
+            n = n * 3 + 1
+        if n == 1:
+            ans.append(n)
+            break
+    return len(ans)
+
+
+while True:
+    try:
+        result = []
+        a = list(map(int, input().split()))
+        for k in range(a[0], a[-1] + 1):
+            result.append(func(k))
+        print(a[0], a[-1], max(result))
+    except EOFError:
+        break
