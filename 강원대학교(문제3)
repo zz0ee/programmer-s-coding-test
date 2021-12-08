@@ -1,0 +1,15 @@
+while True:
+    try:
+        a = input()
+
+        if a[0] != '0':  # 10진수를 16진수로 바꿔주는 형식
+            a = int(a)
+            a = hex(a)
+            num_1 = a[2:].upper()
+
+            ans = a[:2] + num_1
+            print("".join(ans))
+        else:  # 16진수를 10진수로 바꿔주는 타입
+            print(int(a, 16))
+    except EOFError:
+        break
