@@ -1,0 +1,8 @@
+def solution(size):
+    min_list = []
+    max_list = []
+    for j in size:
+        min_list.append(min(j))
+        max_list.append(max(j))
+    ans =  max(max_list)*max(min_list)
+    return ans
