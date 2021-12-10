@@ -1,0 +1,10 @@
+def solution(nums):
+    num_1 = len(nums)//2
+    ans = list(set(nums))
+    result = 0
+    if num_1 >= len(ans):
+        result = len(ans)
+    else:
+        result = num_1
+    return result
+        
