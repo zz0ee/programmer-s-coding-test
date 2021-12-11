@@ -1,0 +1,35 @@
+
+
+count = 0
+cnt_zero = 0
+
+
+def func(m):
+    global cnt_zero
+    if '0' in m:
+        for k in m:
+            if k == '0':
+                m.remove(k)
+                cnt_zero += 1
+            else:
+                pass
+    return len(m)
+
+
+def binary(k):
+    k = str(bin(k))[2:]
+    return ''.join(k)
+
+
+def solution(n):
+    global count
+    global cnt_zero
+    if n == '1':
+        new_list = [count, cnt_zero]
+        return new_list
+    else:
+        count += 1
+        n = list(str(n))
+        return solution(binary(func(n)))
+
+
