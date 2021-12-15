@@ -1,0 +1,14 @@
+from itertools import permutations
+
+
+def func(n):
+    ans = list(permutations(n, len(n)))
+    return ans
+
+
+result = []
+for j in func([6, 10, 2]):
+    j = list(j)
+    num_1 = ''.join(j)
+    print(num_1)
+
