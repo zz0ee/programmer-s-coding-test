@@ -1,0 +1,28 @@
+def solution(id_list, report, num_1):
+    result = []
+    for j in report:
+        j = j.split(' ')
+        result.append(j)
+
+    for j in range(len(result)):  # 중복되는 요소를 없애주는 코드입니다.
+        for f in result[j + 1:]:
+            if f == result[j]:
+                result.remove(f)
+            else:
+                continue
+    a1 = []
+    for j in result:
+        a1.append(j[1])
+    last = dict()
+    for h in id_list:
+        last[h] = 0
+
+    for d in result:
+        if a1.count(d[1]) >= num_1:
+            last[d[0]] += 1
+        else:
+            continue
+    answer = []
+    for j in id_list:
+        answer.append(last[j])
+    return answer
