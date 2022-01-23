@@ -14,8 +14,14 @@ def func(lotto, win_nums):
     ans = len(result)
     num_1 = 7 - ans  # 최저순위
     num_2 = 7 - (ans + cnt)  # 최고순위
-    if num_1 >= 6:
+    if num_1 >= 6 and num_2 >= 6:
+        num_1 = 6
+        num_2 = 6
+    elif num_1 >= 6:
         num_1 = 6
     elif num_2 >= 6:
         num_2 = 6
-    return [num_2, num_1]
+    else:
+        pass
+
+    return [num_2,num_1]
