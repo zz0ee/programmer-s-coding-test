@@ -1,0 +1,7 @@
+def solution(a, b):
+    sum = 0
+    ans = [a,b]
+    ans.sort()
+    for i in range(ans[0],ans[-1]+1):
+        sum += i
+    return sum
