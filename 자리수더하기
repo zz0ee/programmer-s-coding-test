@@ -1,0 +1,7 @@
+def solution(n):
+    s = str(n)
+    ans= []
+    for j in s:
+        j = int(j)
+        ans.append(j)
+    return sum(ans)
