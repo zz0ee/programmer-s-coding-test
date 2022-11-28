@@ -1,0 +1,13 @@
+def solution(n):
+    s = str(n)
+    ans = []
+    for j in s:
+        j = int(j)
+        ans.append(j)
+    ans.sort(reverse =True)
+    s_1 = ""
+    for h in ans:
+        h = str(h)
+        s_1 = s_1 + h
+    s_2 = int(s_1)
+    return s_2
