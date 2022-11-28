@@ -1,0 +1,8 @@
+def solution(s):
+    if s[0] == "-":
+        ans = s[1:]
+        ans = int(ans)
+        ans = -ans
+    else:
+        ans = int(s)
+    return ans
