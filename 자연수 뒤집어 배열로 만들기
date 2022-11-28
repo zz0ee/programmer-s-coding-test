@@ -1,0 +1,9 @@
+def solution(n):
+    m = str(n)
+    ans = []
+    for i in m:
+        a = int(i)
+        ans.append(a)
+    ans.reverse()
+    return ans
+        
