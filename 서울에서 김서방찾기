@@ -1,0 +1,11 @@
+def solution(seoul):
+    answer = ''
+    i = 0
+    while True:
+        if seoul[i] == "Kim":
+            break
+        else:
+            i += 1
+    answer = '김서방은 {}에 있다'
+    result = answer.format(i)
+    return result
