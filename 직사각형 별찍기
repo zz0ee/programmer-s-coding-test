@@ -1,0 +1,9 @@
+a, b = map(int, input().strip().split(' '))
+star = ''
+for j in range(b):
+    for h in range(a):
+        star += "*"
+    print(star)
+    star = ""
+    
+    
