@@ -1,0 +1,20 @@
+from string import ascii_lowercase
+from string import ascii_uppercase
+
+def solution(s):
+    a1 = list(ascii_lowercase)
+    a2 = list(ascii_uppercase)
+    if len(s) == 4 or len(s) == 6:
+        while True:
+            for j in s:
+                if j in a1 or j in a2:
+                    return False
+                    break
+                else:
+                    continue
+            return True
+            break
+    else:
+        return False
+            
+                
