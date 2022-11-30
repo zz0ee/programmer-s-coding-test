@@ -1,0 +1,8 @@
+def solution(arr):
+    result = arr[:1]
+    for j in arr:
+        if result[-1] == j:
+            continue
+        else:
+            result.append(j)
+    return result
