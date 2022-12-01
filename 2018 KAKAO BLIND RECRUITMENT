@@ -1,0 +1,26 @@
+def solution(n, arr1, arr2):
+    answer = []
+    for j in range(n):
+        num_1 = int(bin(arr1[j])[2:])
+        num_2 = int(bin(arr2[j])[2:])
+        n3 = num_1 + num_2
+        answer.append(n3)
+    result = []
+    for k in answer:
+        s = ''
+        k = str(k)
+        if len(k) < 5:
+            k = k.insert(0,0)
+        for g in k:
+            if int(g) >= 1:
+                s += '#'
+            else:
+                s += ' '
+        result.append(s)
+    return result
+        
+    
+                
+        
+            
+    
