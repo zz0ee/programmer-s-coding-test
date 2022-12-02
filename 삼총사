@@ -1,0 +1,16 @@
+import itertools
+
+def solution(number):
+    result = itertools.combinations(number,3)
+    answer = []
+    for j in result:
+        answer.append(list(j))
+    num_1 = 0
+    for h in answer:
+        if sum(h) == 0:
+            num_1 += 1
+        else:
+            continue
+    return num_1
+        
+        
