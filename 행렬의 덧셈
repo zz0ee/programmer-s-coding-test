@@ -1,0 +1,11 @@
+
+
+def solution(arr1, arr2):
+    for h in range(0,len(arr1)):
+        for g in range(0,len(arr1[h])):
+            arr1[h][g] += arr2[h][g]
+    return arr1
+        
+        
+
+    
