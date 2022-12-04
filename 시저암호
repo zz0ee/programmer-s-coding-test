@@ -1,0 +1,33 @@
+from string import ascii_uppercase
+from string import ascii_lowercase
+
+
+def solution(s, n):
+    answer = ''
+    up = ascii_uppercase
+    low = ascii_lowercase
+    for j in s:
+        if j in up:
+            if up.index(j) + n >= 25:
+                num_1 = up.index(j)
+                s1 = up[num_1-26+n]
+                answer += s1
+            else:
+                num_1 = up.index(j)
+                s2 = up[num_1 + n]
+                answer += s2
+        elif j in low:
+            if low.index(j) + n >= 25:
+                num_1 = low.index(j)
+                s1 = low[num_1-26+n]
+                answer += s1
+            else:
+                num_1 = low.index(j)
+                s2 = low[num_1 + n]
+                answer += s2
+        else:
+            answer += j
+    return answer        
+                
+                
+                
