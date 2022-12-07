@@ -1,0 +1,15 @@
+def solution(s):
+    d1 = s.split(' ')
+    d2 = []
+    answer = ''
+    for h in d1:
+        d2.append(int(h))
+    answer += str(min(d2))
+    answer += ' '
+    answer += str(max(d2))
+    return answer
+    
+    
+        
+              
+    
