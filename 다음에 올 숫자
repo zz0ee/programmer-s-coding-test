@@ -1,0 +1,10 @@
+def solution(common):
+    for j in range(0,len(common)):
+        if common[j+1] - common[j] == common[j+2] - common[j+1]:
+            answer = common[-1] + (common[j+2] - common[j+1])
+            break
+        elif common[j+2]/common[j+1] == common[j+1]/common[j]:
+            answer = common[-1] * (common[j+2]/common[j+1])
+            break
+    return answer
+        
