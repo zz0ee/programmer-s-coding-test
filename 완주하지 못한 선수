@@ -1,0 +1,11 @@
+from collections import Counter
+
+
+def solution(participant, completion):
+    n1 = Counter(participant)
+    n2 = Counter(completion)
+    
+    for j in n1:
+        if n1[j] != n2[j]:
+            result = j
+    return result
