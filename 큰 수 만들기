@@ -1,0 +1,11 @@
+from itertools import combinations
+
+def solution(number, k):
+    ans = list(map(int,number))    #map의 역할에 대해서 공부해보자
+    result = list(combinations(ans,len(ans)-k))
+    result.sort()
+    answer = ''
+    for j in result[-1]:
+        answer += str(j)
+    return answer
+    
