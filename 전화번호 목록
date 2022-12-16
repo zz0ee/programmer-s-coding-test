@@ -1,0 +1,20 @@
+def solution(phone_book):
+    ans = phone_book   #좀더 쉽게 코드를 작성하기 위해 변수명을 바꿔줌
+    result = []
+    for k in ans:
+        p = k
+        ans.remove(k)
+        num_1 = 0
+        for k in ans:
+            if k[:len(p)] == p:
+                num_1 += 1
+            else:
+                continue
+        result.append(num_1)
+    answer = list(set(result))
+    if len(answer) >= 2:
+        return False
+    else:
+        return True
+        
+               
