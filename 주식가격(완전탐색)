@@ -1,0 +1,15 @@
+from collections import deque
+
+def solution(prices):
+    a1 = deque(prices)
+    result = []
+    while (a1): 
+        prices = a1.popleft()
+        cnt = 0
+        for h in a1:
+            cnt += 1
+            if prices > h:
+                break
+        result.append(cnt)
+    return result
+        
