@@ -1,0 +1,17 @@
+def solution(t, p):
+    n1 = len(t) - len(p)
+    ans = []
+    for j in range(0,n1+1):
+        ans.append(t[j:j+len(p)])
+    result = []
+    for k in ans:
+        k = int(k)
+        result.append(k)
+    cnt = 0
+    for j in result:
+        n2 = int(p)
+        if j <= n2:
+            cnt += 1
+    return cnt
+        
+        
