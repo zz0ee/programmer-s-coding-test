@@ -1,7 +1,7 @@
 def solution(t, p):
     n1 = len(t) - len(p)
     ans = []
-    for j in range(0,n1+1):
+    for j in range(0,n1+1):    #for문을 과도하게 많이 사용하였음.
         ans.append(t[j:j+len(p)])
     result = []
     for k in ans:
