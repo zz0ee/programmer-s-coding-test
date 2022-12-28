@@ -2,14 +2,24 @@ def solution(n, lost, reserve):
     student = dict()
     for j in range(1,n+1):
         student[j] = 1
+        
+    lost = set(lost)
+    reserve = set(reserve)
+    lost_1 = list(lost - reserve)
+    reserve_1 = list(reserve - lost)     //차집합을 사용해서 겹치는 부분 제외처리함.
+    
     for h in list(student.keys()):
-        if h in lost:
+        if h in lost_1:
             student[h] -= 1
-        elif h in reserve:
+        elif h in reserve_1:
             student[h] += 1
+        
     ans_1 = list(student.values())
     for k in range(0,n):
         if k == n-1:
+            if ans_1[k-1] == 0:      //k = n-1인 경우 index range error를 방지하고자 break문을 걸어놓음
+                ans_1[k] -= 1
+                ans_1[k-1] += 1
             break
         if ans_1[k] == 2:
             if ans_1[k+1] == 0:
