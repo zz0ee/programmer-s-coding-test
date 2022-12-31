@@ -1,0 +1,16 @@
+from collections import deque
+
+
+def solution(progresses, speeds):
+    mid = [100 - j for j in progresses]
+    ans = []
+    for k in range(0,len(mid)):
+        num_1 = mid[k]%speeds[k]
+        num_2 = mid[k]//speeds[k]
+        if num_1 == 0:
+            ans.append(num_2)
+        else:
+            ans.append(num_2 + 1)
+    
+        
+        
