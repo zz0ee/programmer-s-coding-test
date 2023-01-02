@@ -1,0 +1,17 @@
+def solution(food):
+    answer = ''
+    
+    for k in range(1,len(food)):
+        for j in range(food[k]//2):
+            answer += str(k)
+    
+    answer += '0'
+    a1 = list(map(int,answer))
+    a1.reverse()
+    
+    a1 = [str(k) for k in a1]
+    
+    for j in range(1,len(a1)):
+        answer += a1[j]
+    return answer
+    
