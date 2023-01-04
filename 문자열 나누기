@@ -1,0 +1,19 @@
+def solution(s):
+    answer = 0
+    while s:
+        answer += 1
+        s1 = s[0]
+        scount = 1
+        dcount = 0
+        for j in range(1,len(s)):
+            if s1 == s[j]:
+                scount += 1
+            else:
+                dcount += 1
+                
+            if scount == dcount:
+                break
+        s = s[scount + dcount:]
+        
+    return answer
+            
