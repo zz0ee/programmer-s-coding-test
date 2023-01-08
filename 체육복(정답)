@@ -1,11 +1,13 @@
 def solution(n, lost, reserve):
-    set_r = set(reserve) - set(lost)
-    set_l = set(lost) - set(reserve)
+    set_r = set(reserve) - set(lost)  #여분이 있는 학생들
+    set_l = set(lost) - set(reserve)  #여분이 없는 학생들
 
-    for r in set_r:
-        if r-1 in set_l:
+    for r in set_r:  #여분이 있는 학생들
+        if r-1 in set_l:    #r-1이 lost에 있다면 reserve에 있는 학생이 체육복을 줄 수 있다.
             set_l.remove(r-1)
-        elif r+1 in set_l:
+        elif r+1 in set_l:   #r+1이 lost에 있다면 reserve에 있는 학생이 체육복을 줄 수 있다.
             set_l.remove(r+1)
+        elif len(set_l) == 0:
+            break
 
-    return n - len(set_l)
+    return n - len(set_l)  #전체에서 set_1 요소의 수를 빼면 최댓값이 나온다.
